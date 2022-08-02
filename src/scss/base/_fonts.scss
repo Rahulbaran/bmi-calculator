@@ -1,0 +1,31 @@
+@mixin fontFace($family, $weight, $src) {
+  font-family: $family;
+  src: url($src);
+  font-style: normal;
+  font-weight: $weight;
+  font-display: auto;
+}
+
+@font-face {
+  @include fontFace("Saira", normal, "../assets/fonts/Saira-Regular.ttf");
+}
+@font-face {
+  @include fontFace("Saira", 500, "../assets/fonts/Saira-Medium.ttf");
+}
+@font-face {
+  @include fontFace("Saira", 700, "../assets/fonts/Saira-Bold.ttf");
+}
+@font-face {
+  @include fontFace(
+    "Signika Negative",
+    normal,
+    "../assets/fonts/SignikaNegative-Regular.ttf"
+  );
+}
+@font-face {
+  @include fontFace(
+    "Signika Negative",
+    500,
+    "../assets/fonts/SignikaNegative-Medium.ttf"
+  );
+}

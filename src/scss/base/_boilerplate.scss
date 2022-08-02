@@ -1,0 +1,41 @@
+@use "../abstracts/" as a;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  min-block-size: 100vh;
+  scroll-behavior: smooth;
+
+  @include a.breakpoint(medium) {
+    font-size: 81.25%;
+  }
+  @include a.breakpoint(large) {
+    font-size: 100%;
+  }
+  @include a.breakpoint(xlarge) {
+    font-size: 118.25%;
+  }
+  @media (prefers-reduced-motion) {
+    scroll-behavior: auto;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --font-stack-saira: "Saira", sans-serif;
+  --font-stack-signika-negative: "Signika Negative", sans-serif;
+}
+
+body {
+  font: map-get(a.$font-weights, regular) a.$base-font-size
+    var(--font-stack-saira);
+  line-height: a.$base-lh;
+  min-block-size: inherit;
+}

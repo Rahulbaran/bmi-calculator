@@ -1,0 +1,24 @@
+@use "../abstracts/" as a;
+
+.card {
+  background-color: a.$white;
+  padding: a.$base-padding * 2;
+  padding-block-end: a.$base-padding * 1.6;
+  border-radius: a.$base-border-radius * 0.35;
+  box-shadow: 0 7px 8px transparentize(a.$black, 0.6);
+}
+
+.grid__bmi--card {
+  padding: a.$base-padding * 4;
+  background-image: linear-gradient(
+    to top right,
+    adjust-hue(a.$blue, 20deg),
+    lighten(adjust-hue(a.$blue, 20deg), 15%)
+  );
+  background-color: adjust-hue(a.$blue, 20deg);
+
+  h2 {
+    color: lighten(a.$blue, 45%);
+    letter-spacing: 0.5px;
+  }
+}

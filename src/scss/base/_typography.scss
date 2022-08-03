@@ -1,0 +1,16 @@
+@use "../abstracts/" as a;
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: map-get(a.$font-weights, bold);
+  line-height: 0.75;
+  color: adjust-hue(darken(a.$blue, 25%), 25deg);
+  text-align: center;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}

@@ -1,0 +1,58 @@
+@use "../abstracts" as a;
+
+.btn {
+  background-color: transparent;
+  border: none;
+  padding: a.$base-padding * 0.25;
+  transition: transform 100ms, opacity 100ms;
+
+  > i {
+    color: lighten(adjust-hue(a.$blue, 20deg), 5%);
+    width: 25px;
+    height: 25px;
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      left: 7px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+
+  &__result {
+    font: map-get(a.$font-weights, medium) a.$base-font-size * 1.2
+      var(--font-stack-signika-negative);
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    padding: a.$base-padding * 1.5 a.$base-padding * 5;
+    background-image: linear-gradient(
+      to top right,
+      lighten(adjust-hue(a.$red, -20deg), 10%),
+      adjust-hue(a.$red, -20deg),
+      lighten(adjust-hue(a.$red, -20deg), 10%)
+    );
+    background-color: adjust-hue(a.$red, -20deg);
+    border-radius: 1.5rem;
+    color: a.$white;
+    box-shadow: 2px 2px 3px transparentize(a.$black, 0.65);
+    transition: transform 200ms, box-shadow 200ms;
+
+    &:hover {
+      box-shadow: 4px 5px 6px transparentize(a.$black, 0.6);
+      opacity: 0.9;
+    }
+
+    &:active {
+      box-shadow: 3px 3px 5px transparentize(a.$black, 0.67);
+    }
+  }
+}

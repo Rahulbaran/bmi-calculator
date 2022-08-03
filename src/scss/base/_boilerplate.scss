@@ -38,4 +38,10 @@ body {
     var(--font-stack-saira);
   line-height: a.$base-lh;
   min-block-size: inherit;
+  background-image: radial-gradient(
+    circle at 0% 50%,
+    lighten(a.$blue, 40%) 0 60%,
+    lighten(a.$blue, 47%) 60%
+  );
+  background-color: lighten(a.$blue, 43%);
 }

@@ -3,5 +3,5 @@ node_modules
 package-lock.json
 
 # Cache
-.Vscode
+.vscode
 .DS_Store

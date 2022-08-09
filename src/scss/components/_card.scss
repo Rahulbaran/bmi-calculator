@@ -12,13 +12,13 @@
   padding: a.$base-padding * 4;
   background-image: linear-gradient(
     to top right,
-    adjust-hue(a.$blue, 20deg),
-    lighten(adjust-hue(a.$blue, 20deg), 15%)
+    darken(adjust-hue(a.$red, 10deg), 15%),
+    darken(a.$red, 10%)
   );
-  background-color: adjust-hue(a.$blue, 20deg);
+  background-color: adjust-hue(a.$red, 10deg);
 
   h2 {
-    color: lighten(a.$blue, 45%);
+    color: lighten(a.$blue, 48%);
     letter-spacing: 0.5px;
   }
 }
